@@ -9,7 +9,7 @@ h = (b - a) / n;
 q_left = sum(h * f(x(1:n)))
 q_right = sum(h * f(x(2:n+1)))
 q_trap = (q_left + q_right) / 2
-q_middle = sum(h * (f(x(1:n)) + f(x(2:n+1))) / 2)
+q_middle = sum(h * f((x(1:n) + x(2:n+1)) ./ 2))
 
 
 %% Uppgift 3
