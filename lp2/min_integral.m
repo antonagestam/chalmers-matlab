@@ -31,7 +31,7 @@ function q=min_integral(f,I,n,k)
     elseif k == 2
         q = q_right;
     elseif k == 3;
-        q = sum(h * (f(x(1:n)) + f(x(2:n+1))) / 2);
+        q = sum(h * f((x(1:n) + x(2:n+1)) ./ 2));
     elseif k == 4
         q = (q_left + q_right) / 2;
     end
