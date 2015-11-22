@@ -18,9 +18,6 @@ for i = 1:3
     plot(t, U), axis equal, grid on, title(sprintf('h = %g', h))
 end
 
-subplot(2, 2, i + 1)
-[t, U] = ode45(f, [a b], ua);
-plot(t, U), axis equal, grid on, title('ode45')
 
 %% Uppgift 2 och 3
 
@@ -39,3 +36,18 @@ for i = 1:size(function_data)
     [t, U] = min_ode(f, I, ua, h);
     plot(t, U), axis equal
 end
+
+
+%% Uppgift 4
+
+f = @(t, u) cos(3.*t) - sin(5.*t) .* u;
+a = 1;
+b = 15;
+ua = 2;
+
+[t, U] = ode45(f, [a b], ua);
+hold on
+plot(t, U), axis equal, grid on
+
+[t, U] = min_ode(f, [a b], ua, .001);
+plot(t, U)
