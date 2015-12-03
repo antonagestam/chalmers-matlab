@@ -51,3 +51,5 @@ plot(t, U), axis equal, grid on
 
 [t, U] = min_ode(f, [a b], ua, .001);
 plot(t, U)
+
+legend('ode45', 'min\_ode')
