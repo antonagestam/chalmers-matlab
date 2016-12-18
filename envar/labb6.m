@@ -37,7 +37,7 @@ subplot(1, 2, 1), hold off
 l_xlabel('$t$')
 l_ylabel('$\theta(t)$')
 
-title('Lösningar')
+title('Lösningar, dämpad pendel')
 
 subplot(1, 2, 2), hold off
 l_xlabel('$\theta(t)$')
